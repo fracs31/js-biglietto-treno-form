@@ -64,6 +64,7 @@ section {
     display: block;
     margin-bottom: 20px;
     color: var(--bordeaux);
+    font-size: 18px;
 }
 
 /* Input */
@@ -85,4 +86,16 @@ section {
     padding: 5px;
     cursor: pointer;
     margin-right: 15px;
+}
+
+/* Biglietto finale */
+.final-ticket {
+    background-color: white;
+    padding: 45px 40px;
+}
+
+/* Sottotitolo */
+.subtitle {
+    text-transform: uppercase;
+    color: black;
 }
