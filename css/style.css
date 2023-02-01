@@ -49,6 +49,10 @@ section {
 /* Riga */
 .row {
     display: flex;
+}
+
+/* Riga del form */
+.form .row {
     justify-content: center;
     text-align: center;
     gap: 115px;
@@ -91,11 +95,31 @@ section {
 /* Biglietto finale */
 .final-ticket {
     background-color: white;
+    color: black;
     padding: 45px 40px;
+}
+
+/* Riga del biglietto */
+.final-ticket .row {
+    justify-content: space-between;
+}
+
+/* Colonne della riga del biglietto */
+.final-ticket .row .col {
+    padding: 10px;
+}
+
+/* Prima colonna della riga del biglietto */
+.final-ticket .row .col:first-child {
+    background-color: var(--dark-grey);
 }
 
 /* Sottotitolo */
 .subtitle {
     text-transform: uppercase;
-    color: black;
+}
+
+/* Info */
+.info {
+    margin-bottom: 50px;
 }
