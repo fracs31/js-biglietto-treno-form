@@ -12,6 +12,12 @@ const discount40 = 0.4; //sconto del 40% per gli over65
 
 //Creazione del biglietto
 submit.addEventListener("click", function(){
+    //Reset dati
+    document.getElementById("fullNameTicket").innerHTML = ""; //stampa del nome completo
+    document.getElementById("offert").innerHTML = ""; //stampa dello sconto effettuato
+    document.getElementById("coach").innerHTML = ""; //stampa della carrozza
+    document.getElementById("code").innerHTML = ""; //stampa della carrozza
+    document.getElementById("price").innerHTML = ""; //stampa del prezzo finale
     //Input
     fullName = document.getElementById("fullName").value; //prendo il nome completo
     km = parseFloat(document.getElementById("km").value); //prendo i chilometri da percorrere
