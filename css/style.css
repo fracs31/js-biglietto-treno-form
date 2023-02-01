@@ -11,3 +11,78 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+/* Body */
+body {
+    background-color: var(--bordeaux);
+    color: white;
+}
+
+/* Sezioni */
+section {
+    padding-top: 45px;
+}
+
+/* Titolo */
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+/* Form */
+.form {
+    background-color: white;
+    margin-top: 45px;
+    padding-top: 55px;
+    padding-bottom: 40px;
+    color: black;
+    border-radius: 4px;
+}
+
+/* Riga */
+.row {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 115px;
+}
+
+/* Seconda riga nel form */
+.form .row + .row {
+    margin-top: 100px;
+}
+
+/* Label */
+.form label {
+    display: block;
+    margin-bottom: 20px;
+    color: var(--bordeaux);
+}
+
+/* Input */
+.form input[type="text"],
+.form select {
+    border: 1px solid var(--bordeaux);
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+/* Bottoni */
+.button {
+    border: 1px solid var(--dark-grey);
+    border-radius: 4px;
+    background-color: var(--light-grey);
+    color: var(--bordeaux);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+    margin-right: 15px;
+}
