@@ -20,42 +20,57 @@ submit.addEventListener("click", function(){
     switch (discount) {
         //Sconto minorenni
         case 'under18':
-            finalPrice = km * priceforkm; //calcolo del prezzo base
-            finalPrice = (finalPrice - (finalPrice * discount20)).toFixed(2); //calcolo sconto 20%
-            coach =  Math.floor(Math.random() * (5 - 1 + 1) + 1); //calcolo casuale della carrozza
-            code = Math.floor(Math.random() * (9200 - 9100 + 1) + 9100); //calcolo casuale del treno
-            document.getElementById("fullNameTicket").innerHTML = fullName; //stampa del nome completo
-            document.getElementById("offert").innerHTML = "Sconto minorenni"; //stampa dello sconto effettuato
-            document.getElementById("coach").innerHTML = coach; //stampa della carrozza
-            document.getElementById("code").innerHTML = code; //stampa della carrozza
-            document.getElementById("price").innerHTML = finalPrice + "€"; //stampa del prezzo finale
+            //Se l'utente ha inserito il nome e i chilometri da percorrere
+            if (fullName != "" && km > 0) {
+                finalPrice = km * priceforkm; //calcolo del prezzo base
+                finalPrice = (finalPrice - (finalPrice * discount20)).toFixed(2); //calcolo sconto 20%
+                coach =  Math.floor(Math.random() * (5 - 1 + 1) + 1); //calcolo casuale della carrozza
+                code = Math.floor(Math.random() * (9200 - 9100 + 1) + 9100); //calcolo casuale del treno
+                document.getElementById("fullNameTicket").innerHTML = fullName; //stampa del nome completo
+                document.getElementById("offert").innerHTML = "Sconto minorenni"; //stampa dello sconto effettuato
+                document.getElementById("coach").innerHTML = coach; //stampa della carrozza
+                document.getElementById("code").innerHTML = code; //stampa della carrozza
+                document.getElementById("price").innerHTML = finalPrice + "€"; //stampa del prezzo finale
+            } else { //altrimenti
+                alert("Inserire correttamente i dati!"); //messaggio di errore
+            }
             break; //fine condizione
         //Nessuno sconto
         case 'over18':
-            finalPrice = (km * priceforkm).toFixed(2); //calcolo del prezzo finale
-            coach =  Math.floor(Math.random() * (5 - 1 + 1) + 1); //calcolo casuale della carrozza
-            code = Math.floor(Math.random() * (9200 - 9100 + 1) + 9100); //calcolo casuale del treno
-            document.getElementById("fullNameTicket").innerHTML = fullName; //stampa del nome completo
-            document.getElementById("offert").innerHTML = "Biglietto Standard"; //stampa dello sconto effettuato
-            document.getElementById("coach").innerHTML = coach; //stampa della carrozza
-            document.getElementById("code").innerHTML = code; //stampa della carrozza
-            document.getElementById("price").innerHTML = finalPrice + "€"; //stampa del prezzo finale
+            //Se l'utente ha inserito il nome e i chilometri da percorrere
+            if (fullName != "" && km > 0) {
+                finalPrice = (km * priceforkm).toFixed(2); //calcolo del prezzo finale
+                coach =  Math.floor(Math.random() * (5 - 1 + 1) + 1); //calcolo casuale della carrozza
+                code = Math.floor(Math.random() * (9200 - 9100 + 1) + 9100); //calcolo casuale del treno
+                document.getElementById("fullNameTicket").innerHTML = fullName; //stampa del nome completo
+                document.getElementById("offert").innerHTML = "Biglietto Standard"; //stampa dello sconto effettuato
+                document.getElementById("coach").innerHTML = coach; //stampa della carrozza
+                document.getElementById("code").innerHTML = code; //stampa della carrozza
+                document.getElementById("price").innerHTML = finalPrice + "€"; //stampa del prezzo finale
+            } else { //altrimenti
+                alert("Inserire correttamente i dati!"); //messaggio di errore
+            }
             break; //fine condizione
         //Sconto over65
         case 'over65':
-            finalPrice = km * priceforkm; //calcolo del prezzo base
-            finalPrice = (finalPrice - (finalPrice * discount40)).toFixed(2); //calcolo sconto 40%
-            coach =  Math.floor(Math.random() * (5 - 1 + 1) + 1); //calcolo casuale della carrozza
-            code = Math.floor(Math.random() * (9200 - 9100 + 1) + 9100); //calcolo casuale del treno
-            document.getElementById("fullNameTicket").innerHTML = fullName; //stampa del nome completo
-            document.getElementById("offert").innerHTML = "Sconto over65"; //stampa dello sconto effettuato
-            document.getElementById("coach").innerHTML = coach; //stampa della carrozza
-            document.getElementById("code").innerHTML = code; //stampa della carrozza
-            document.getElementById("price").innerHTML = finalPrice + "€"; //stampa del prezzo finale
+            //Se l'utente ha inserito il nome e i chilometri da percorrere
+            if (fullName != "" && km > 0) {
+                finalPrice = km * priceforkm; //calcolo del prezzo base
+                finalPrice = (finalPrice - (finalPrice * discount40)).toFixed(2); //calcolo sconto 40%
+                coach =  Math.floor(Math.random() * (5 - 1 + 1) + 1); //calcolo casuale della carrozza
+                code = Math.floor(Math.random() * (9200 - 9100 + 1) + 9100); //calcolo casuale del treno
+                document.getElementById("fullNameTicket").innerHTML = fullName; //stampa del nome completo
+                document.getElementById("offert").innerHTML = "Sconto over65"; //stampa dello sconto effettuato
+                document.getElementById("coach").innerHTML = coach; //stampa della carrozza
+                document.getElementById("code").innerHTML = code; //stampa della carrozza
+                document.getElementById("price").innerHTML = finalPrice + "€"; //stampa del prezzo finale
+            } else { //altrimenti
+                alert("Inserire correttamente i dati!"); //messaggio di errore
+            }
             break; //fine condizione
         //Errore
         default:
-            console.log("Errore"); //stampa di un messaggio di errore
+            alert("Inserire correttamente i dati!"); //messaggio di errore
             break; //fine condizione
     }
 });
