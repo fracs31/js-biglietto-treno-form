@@ -1,4 +1,10 @@
 /* Regole generali */
+:root {
+    --bordeaux: #B91450;
+    --light-grey: #CCCCCC;
+    --dark-grey: #808080;
+}
+
 * {
     margin: 0px;
     padding: 0px;
