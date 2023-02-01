@@ -20,18 +20,24 @@ submit.addEventListener("click", function(){
         case 'under18':
             finalPrice = km * priceforkm;
             finalPrice = (finalPrice - (finalPrice * discount20)).toFixed(2);
-            console.log(finalPrice);
+            document.getElementById("fullNameTicket").innerHTML = fullName;
+            document.getElementById("offert").innerHTML = "Sconto minorenni";
+            document.getElementById("price").innerHTML = finalPrice;
             break;
         //Nessuno sconto
         case 'over18':
             finalPrice = (km * priceforkm).toFixed(2);
-            console.log(finalPrice);
+            document.getElementById("fullNameTicket").innerHTML = fullName;
+            document.getElementById("offert").innerHTML = "Biglietto Standard";
+            document.getElementById("price").innerHTML = finalPrice;
             break;
         //Sconto over65
         case 'over65':
             finalPrice = km * priceforkm;
             finalPrice = (finalPrice - (finalPrice * discount40)).toFixed(2);
-            console.log(finalPrice);
+            document.getElementById("fullNameTicket").innerHTML = fullName;
+            document.getElementById("offert").innerHTML = "Sconto over65";
+            document.getElementById("price").innerHTML = finalPrice;
             break;
         //Errore
         default:
